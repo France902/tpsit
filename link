@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caratteri{
+            font-family: 'Comic Sans SM',cursive,sans-serif;
+        }
+    </style>
+
+    <style>
+         #linkutili{
+            background-color: rgb(233, 138, 138);
+            border: 1px solid black
+            
+         }
+    </style>
+
+</head>
+<body>
+    <div id="linkutili"> 
+
+    <p> 
+        Il mio sito di riferimento è: 
+
+        <a href="http://www.w3schools.com/">w3schools</a>
+        <span class="caratteri"></span>
+    </p>
+    <p> 
+        Il sito della Microsoft:
+
+        <a href="microsoft.it"> microsoft</a>
+    </p>
+    <p> 
+        Il mio sito preferito è: 
+
+        <a href="https://www.xbox.com/it-IT/">xbox</a>
+    </p>
+    <p> 
+        Il sito dove compro qualunque cosa:
+
+        <a href="https://www.amazon.it "> amazon</a>
+    </p>
+    <p> 
+        Il sito dove guardo video: 
+
+        <a href="https://www.youtube.com/">youtube</a>
+    </p>
+    <p> 
+        Il sito dove compro a basso prezzo:
+
+        <a href="https://www.wish.com/it"> wish</a>
+    </p>
+    <p> 
+        Il sito dove mi informo maggiormente: 
+
+        <a href="https://chatgpt.com/">chatgpt</a>
+    </p>
+    <p> 
+        Il sito che mi porta da mangiare:
+
+        <a href="https://www.justeat.it"> just eat</a>
+    </p>
+    <p> 
+        Il sito dove ascolto musica: 
+
+        <a href="https://open.spotify.com/intl-it">spotify</a>
+    </p>
+    <p> 
+        Il sito dove faccio presentazioni per scuola:
+        <a href="https://www.microsoft.com/it-it/microsoft-365/powerpoint?market=it"> powerpoint</a>
+    </p>
+    
+
+    </div>
+    
+</body>
+</html>
