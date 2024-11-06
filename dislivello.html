@@ -18,7 +18,7 @@
         position: fixed;
         margin-top: 250px;
         margin-left: 300px;
-        
+        opacity: 0;
     }
     #scritta3{
         width: 100px;
@@ -28,6 +28,7 @@
         position: fixed;
         margin-left: 750px;
         margin-top: 50px;
+        opacity: 0;
     }
     #scritta4{
         width: 100px;
@@ -37,7 +38,18 @@
         position: fixed;
         margin-left: 530px;
         margin-top: 200px;
+        opacity: 0;
     }
+    #scritta5{
+        width: 300px;
+        height: 90px;
+        z-index: 1;
+        position: fixed;
+        margin-left: 20px;
+        margin-top: 20PX;
+
+    }
+    
     #scritta_risultato1{
         width: 200px;
         height: 100px;
@@ -45,7 +57,7 @@
         z-index: 1;
         position: fixed;
         margin-left: 20px;
-        
+        opacity: 0;
     }
     #scritta_risultato2{
         width: 200px;
@@ -55,6 +67,7 @@
         position: fixed;
         margin-left: 270px;
         margin-top: -200x;
+        opacity: 0;
     }
     #risultato1{
         width: 100px;
@@ -64,6 +77,7 @@
         margin-top: 44px;
         margin-left: 108px;
         background-color: rgb(220, 218, 218) ;
+        opacity: 0;
     }
     #risultato2{
         width: 100px;
@@ -73,7 +87,16 @@
         margin-top: 44px;
         margin-left: 360px;
         background-color: rgb(220, 218, 218) ;
-
+        opacity: 0;
+        
+    }
+    #button2{
+        width: 200px;
+        height: 100px;
+        margin-top: 200px;
+        z-index: 1;
+        position: fixed;
+        margin-left: 200px ;
         
     }
     #button1{
@@ -83,7 +106,7 @@
         z-index: 1;
         position: fixed;
         margin-left: 700px ;
-
+        opacity: 0;
     }
     #montagna{
         position: fixed;
@@ -104,10 +127,12 @@
         <div id="i3"><input type="text" id="input3"style=" width:95px; background-color: gray; border-color: black ;"></div> </div>
         <div id="scritta4"><p style="font-size: 20px; font-weight: bold;">PUNTO B</p> <p  style="font-size: 10px; font-weight: bold;">(Altezza verso pranzo in metri)</p>
         <div id="i2"><input type="text" id="input2"style=" width:95px; background-color: gray; border-color: black ;"></div> </div>
-        <div id="button1" ><button onclick="dislivello()"><p style="font-size: 20px;font-weight: bold;">Clicca per sapere il dislivello</p></button> </div>
-        <p id="scritta_risultato1" style="font-size: 20px;font-weight: bold;" >Il dislivello tra il punto B e A è di </p>
+        <div id="scritta5"><p style="font-size: 30px; font-weight: bold;">BENVENUTO IN QUESTA PAGINA </p> </div>
+        <div id="button2" ><button onclick="mostra_pagina()"><p style="font-size: 20px;font-weight: bold; cursor: pointer;">Premere per avviare</p></button> </div>
+        <div id="button1" ><button onclick="dislivello()"><p style="font-size: 20px;font-weight: bold; cursor: pointer;">Clicca per sapere il dislivello</p></button> </div>
+        <p id="scritta_risultato1" style="font-size: 20px;font-weight: bold;" >Il dislivello tra il punto B e A è di: </p>
         <p id="risultato1" style="font-size: 20px;font-weight: bold;"></p>
-        <p id="scritta_risultato2" style="font-size: 20px;font-weight: bold;">Il dislivello tra il punto C e A è di </p>
+        <p id="scritta_risultato2" style="font-size: 20px;font-weight: bold;">Il dislivello tra il punto C e A è di: </p>
         <p id="risultato2" style="font-size: 20px;font-weight: bold;"></p>
         </div>
 
@@ -120,7 +145,18 @@
 
     </div>
     <script>
-
+        function mostra_pagina(){
+            document.getElementById('scritta1').style.opacity = 1;
+            document.getElementById('scritta3').style.opacity = 1;
+            document.getElementById('scritta4').style.opacity = 1;
+            document.getElementById('button1').style.opacity = 1;
+            document.getElementById('scritta_risultato1').style.opacity = 1;
+            document.getElementById('scritta_risultato2').style.opacity = 1;
+            document.getElementById('risultato1').style.opacity = 1;
+            document.getElementById('risultato2').style.opacity = 1;
+            document.getElementById('scritta5').style.opacity = 0;
+            document.getElementById('button2').style.opacity = 0;
+        }
     function dislivello(){
         let v1 = document.getElementById('input1').value;
         let v2 = document.getElementById('input2').value;
