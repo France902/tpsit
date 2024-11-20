@@ -2,34 +2,39 @@
 <html>
 <body>
 <style>
+    .body{
+        background-color: beige;
+        width:1000px;
+        height:500px;
+    }
     #sasso{
-        width:50%;
-        height:50%;
+        width:100px;
+        height:100px;
         opacity:0;
         display:none;
     }
     #forbici{
-        width:50%;
-        height:50%;
+        width:100px;
+        height:100px;
         opacity:0;
         display:none;
     }
     #carta{
-        width:50%;
-        height:50%;
+        width:100px;
+        height:100px;
         opacity:0;
         display:none;
     }
 </style>
-<button onclick="getTime()"> sasso, carta o forbici</button>
-<h1>JavaScript Math</h1>
-<h2>The Math.random() Method</h2>
-<p>Math.random()*3 returns a random number between 0 and 3:</p>
+<div class="body"></div>
+<h1 style="margin-top: -500px;">Benvenuto al gioco della Morra cinese</h1>
+<h1 style="width:100px; height:100px; margin-left:100px; margin-top:100px">Utente</h1>
+<h1 style="width:100px; height:100px; margin-left:800px; margin-top:-115px">Computer</h1>
 
 <p id="out1"></p>
-<div id="sasso"> <img src="https://tonazzosrl.it/images/Vascheinsassoscontornateok/178vascainsasso.jpg" alt=""></div>
-<div id="forbici"> <img src="https://www.bcforniture.it/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/p/v/pvsfor078.jpg" alt=""></div>
-<div id="carta"> <img src="https://png.pngtree.com/png-vector/20240125/ourlarge/pngtree-crumpled-paper-png-file-png-image_11493275.png" alt=""></div>
+<div id="sasso"> <img src="c:\Users\Utente1\OneDrive\Desktop\tpsit\pngimg.com - stone_PNG13603.png" alt="" style="width: 180px; height: 180px; margin-top: 0px; margin-left: 800px;"></div>
+<div id="forbici"> <img src="https://static.vecteezy.com/system/resources/previews/021/013/568/non_2x/scissors-for-cutting-icon-on-transparent-background-free-png.png" alt="" style="width: 275px; height:140px; margin-top: 40px; margin-left: 730px;"></div>
+<div id="carta"> <img src="c:\Users\Utente1\OneDrive\Desktop\tpsit\vecteezy_sticky-note-paper-background_37152684.png" alt="" style="width: 180px; height: 180px; margin-top: 0px; margin-left: 800px;"> </div>
 
 <script>
     const mioOutput=document.getElementById("out1");
@@ -38,7 +43,6 @@
     let forbici = document.getElementById("forbici");
     let carta = document.getElementById("carta");
     let x = Math.floor((Math.random() * 3) + 1);
-    document.getElementById("demo").innerHTML = x;
     setInterval(getTime,1000)
   function getTime(){
    if(n==0){
