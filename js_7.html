@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    #sasso{
+        width:50%;
+        height:50%;
+        opacity:0;
+        display:none;
+    }
+    #forbici{
+        width:50%;
+        height:50%;
+        opacity:0;
+        display:none;
+    }
+    #carta{
+        width:50%;
+        height:50%;
+        opacity:0;
+        display:none;
+    }
+</style>
+<button onclick="getTime()"> test sul click</button>
+<h1>JavaScript Math</h1>
+<h2>The Math.random() Method</h2>
+<p>Math.random()*3 returns a random number between 0 and 3:</p>
+
+<p id="out1"></p>
+<div id="sasso"> <img src="https://tonazzosrl.it/images/Vascheinsassoscontornateok/178vascainsasso.jpg" alt=""></div>
+<div id="forbici"> <img src="https://www.bcforniture.it/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/p/v/pvsfor078.jpg" alt=""></div>
+<div id="carta"> <img src="https://png.pngtree.com/png-vector/20240125/ourlarge/pngtree-crumpled-paper-png-file-png-image_11493275.png" alt=""></div>
+
+<script>
+    const mioOutput=document.getElementById("out1");
+    let n=3;
+    let sasso = document.getElementById("sasso");
+    let forbici = document.getElementById("forbici");
+    let carta = document.getElementById("carta");
+    let x = Math.floor((Math.random() * 3) + 1);
+    document.getElementById("demo").innerHTML = x;
+    setInterval(getTime,99999999999999999)
+  function getTime(){
+   if(n==0){
+    mioOutput.style.display= 'none';
+    if(x==1){
+        document.getElementById("sasso").style.display= 'block';
+    }
+    if(x==2){
+        document.getElementById("forbici").style.display= 'block';
+    };
+    if(x==3){
+        document.getElementById("carta").style.display= 'block';
+    };
+    };
+    mioOutput.innerHTML+=n;
+    n=n-1;
+    if(x==1){
+        document.getElementById("sasso").style.opacity= 1;
+    }
+    if(x==2){
+        document.getElementById("forbici").style.opacity= 1;
+    }
+    if(x==3){
+        document.getElementById("carta").style.opacity= 1;
+    }
+  }
+
+
+</script>
+
+</body>
+</html>
