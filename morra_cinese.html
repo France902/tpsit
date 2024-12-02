@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morra cinese</title>
+    <style>
+        #montagna_blu{
+            width:100%;
+            height:100%;
+            position: fixed;
+        }
+        .sasso{
+            position:fixed;
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            margin-top: 40px;
+            opacity:0;
+            display: none; 
+        }
+
+        .carta{
+            position:fixed;
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            margin-top: 270px;
+            opacity:0;
+            display: none;
+        }
+        .forbice{
+            position:fixed;
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            margin-top: 150px;
+            margin-left: 250px;
+            opacity:0;
+            display: none;
+        }
+        .sasso2{
+            position:fixed;
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            margin-top: -10px;
+            margin-left: 1000px;
+            transform: scaleX(-1); 
+            -webkit-transform: scaleX(-1);
+            opacity:0;
+            display: none;
+        }
+        .carta2{
+            position:fixed;
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            margin-top: 220px;
+            margin-left: 1000px;
+            transform: scaleX(-1); 
+            -webkit-transform: scaleX(-1);
+            opacity:0;
+            display: none;
+        }
+        .forbice2{
+            position:fixed;
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            margin-top: 100px;
+            margin-left: 750px;
+            transform: scaleX(-1); 
+            -webkit-transform: scaleX(-1);
+            opacity:0;
+            display: none;
+        }
+     
+
+        #testo1{
+            position:fixed;
+            width:900px;
+            height:60px;
+            background-color: rgb(213, 252, 255);
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 190px;
+            animation: opacity1 1.5s ease-in-out;
+            border: 5px solid black;
+        }
+        @keyframes opacity1{
+            from{
+                opacity:0;
+            }
+            to{
+                opacity:1;
+            }
+        }
+        .bottone1{
+            transition: opacity 0.3s ease;
+            animation: buttone1 3s ease-in-out;
+        }
+        .bottone1:hover{
+            opacity: 0.8;
+        }
+        @keyframes buttone1{
+            0%{
+                opacity:0;
+                display: none;
+            }
+            70%{
+                opacity:0;
+                display: none;
+            }
+            100%{
+                opacity:1;
+                display: block;
+            }
+        }
+        .bottone2{
+            opacity:0;
+            z-index: -3;
+            transition: opacity 2s ease-out;
+        }
+        .bottone3{
+            opacity:0;
+            z-index: -3;
+            transition: opacity 2s ease-out;
+        }
+        .bottone4{
+            opacity:0;
+            z-index: -3;
+            position: fixed;
+
+        }
+        .bottone5{
+            opacity:0;
+            z-index: -3;
+            position: fixed;
+            padding-bottom: 150px;
+        }
+        .bottone6{
+            opacity:0;
+            z-index: -3;
+            position: fixed;
+        }
+        .animazione1{
+            opacity: 1;
+            z-index: 3;
+        }
+        .animazione2{
+            opacity: 1;
+            z-index: 3;
+        }
+        #conto{
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            margin-left: 540px;
+            margin-top: -100px;
+            display:none;
+        }
+        #g1{
+            position: fixed;
+            background-color: rgb(213, 252, 255);
+            width: 100px;
+            height:100px;
+            text-align: center;
+            opacity:0;
+            line-height: normal;
+        }
+        #g2{
+            position: fixed;
+            background-color: rgb(213, 252, 255);
+            width: 100px;
+            height:100px;
+            text-align: center;
+            opacity:0;
+            line-height: normal;
+        }
+        #risultato{
+            position: fixed;
+            background-color: rgb(213, 252, 255);
+            width: 600px;
+            height:100px;
+            text-align: center;
+            opacity:0;
+            line-height: normal;
+        }
+    </style>
+</head>
+<body>
+    <div id="scatola_immagine1"> <img id="montagna_blu" src="https://images.unsplash.com/photo-1480497490787-505ec076689f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+    <div id="testo1"><p style="font-size: 50px; margin-top: 0px;">BENVENUTO ALLA MORRA CINESE</p></div>
+    <div> <button class="bottone1" onclick="Inizia()" style="width:300px; position: fixed; background: none; border: 5px solid black; cursor: pointer; background-color: rgb(213, 252, 255); margin-top: 270px; margin-left: 470px;" ><p style="font-size:50px;">Inizia</p></button></div>
+    <div> <button class="bottone2" onclick="Scelta1()" style="width:300px; position: fixed; background: none; border: 5px solid black; cursor: pointer; background-color: rgb(213, 252, 255); margin-top: 180px; margin-left: 270px;" ><p style="font-size:49px;">Computer vs Computer</p></button></div>
+    <div> <button class="bottone4" onclick="Scelta1()" style="width:300px; position: fixed; background: none; border: 5px solid black; cursor: pointer; background-color: rgb(213, 252, 255); margin-top: 30px; margin-left: 470px;" ><p style="font-size:49px;">Rigioca</p></button></div>
+    <div> <button class="bottone3" onclick="Scelta2()" style="width:300px; position: fixed; background: none; border: 5px solid black; cursor: pointer; background-color: rgb(213, 252, 255); margin-top: 180px; margin-left: 670px;" ><p style="font-size:50px;">Player vs Computer</p></button></div>
+    <div id="scatola_immagine2"> <button onclick="sasso1()" style="cursor: pointer;"> <img class="sasso" src="https://wrpsa.com/wp-content/uploads/2021/08/rock.png" alt=""> </button></div>
+    <div id="scatola_immagine3"> <button onclick="carta1()" style="cursor: pointer;"> <img class="carta" src="https://wrpsa.com/wp-content/uploads/2021/08/paper.png" alt=""> </button></div>
+    <div id="scatola_immagine4"> <button onclick="forbice1()" style="cursor: pointer;"> <img class="forbice" src="https://wrpsa.com/wp-content/uploads/2021/08/scissors.png" alt=""> </button></div>
+    <div id="scatola_immagine5"> <button onclick="sasso2()"> <img class="sasso2" src="https://wrpsa.com/wp-content/uploads/2021/08/rock.png" alt=""> </button></div>
+    <div id="scatola_immagine6"> <button onclick="carta2()"> <img class="carta2" src="https://wrpsa.com/wp-content/uploads/2021/08/paper.png" alt=""> </button></div>
+    <div id="scatola_immagine7"> <button onclick="forbice2()"> <img class="forbice2" src="https://wrpsa.com/wp-content/uploads/2021/08/scissors.png" alt=""> </button></div>
+    <p id="conto" style="font-size:100px;" > </p>
+    <p id="g1" style="font-size:100px; margin-left: 300px; margin-top: -75px; border: 5px solid black;" >0 </p>
+    <p id="g2" style="font-size:100px;margin-left: 800px; margin-top: -75px; border: 5px solid black;" >0 </p>
+    <p id="risultato" style="font-size:70px;margin-left: 310px; margin-top: 325px; border: 5px solid black;" > </p>
+    <div> <button class="bottone5" onclick="esci()" style="width:200px; height:100px; position: fixed; background: none; border: 5px solid black; cursor: pointer; background-color: rgb(213, 252, 255); margin-top: 150px; margin-left: 520px;" ><p style="font-size:50px;">Esci</p></button></div>
+    <div> <button class="bottone6" onclick="Scelta2()" style="width:300px; position: fixed; background: none; border: 5px solid black; cursor: pointer; background-color: rgb(213, 252, 255); margin-top: -100px; margin-left: 470px;" ><p style="font-size:49px;">Rigioca</p></button></div>
+
+
+    <script>
+        let intervalID;
+        let intervalID2;
+        let x=0;
+        let x3=0;
+        let n1=0;
+        const sasso= document.querySelector(".sasso");
+        const sasso2= document.querySelector(".sasso2");
+        const carta= document.querySelector(".carta");
+        const carta2= document.querySelector(".carta2");
+        const forbice= document.querySelector(".forbice");
+        const forbice2= document.querySelector(".forbice2");
+        let x1 = Math.floor((Math.random() * 3) + 1);
+        let x2 = Math.floor((Math.random() * 3) + 1);
+        let n=3;
+        let m1=0;
+        let m2=0;
+        const mioOutput=document.getElementById("conto");
+        
+        function Inizia(){
+            const scelta1 = document.querySelector(".bottone2");
+            scelta1.classList.add("animazione1");
+            const scelta2 = document.querySelector(".bottone3");
+            scelta2.classList.add("animazione2");
+            const testo = document.getElementById("testo1");
+            const bottone = document.querySelector(".bottone1");
+            testo.style.display = 'none';
+            bottone.style.display = 'none';
+        }
+        function Scelta1(){
+            const esci = document.querySelector(".bottone5");
+            esci.style.opacity = '0';
+            esci.style.zIndex = '-3';
+            const g1 = document.getElementById("g1");
+            const g2 = document.getElementById("g2");
+            const risultato = document.getElementById("risultato");
+            mioOutput.innerHTML = '';
+            n=3;
+            const rigioca = document.querySelector(".bottone4");
+            const scelta1 = document.querySelector(".bottone2");
+            const scelta2 = document.querySelector(".bottone3");
+            sasso.style.opacity = '1';
+            sasso.style.display = 'block';
+            sasso.style.zIndex = '3';
+            sasso2.style.opacity = '1';
+            sasso2.style.display = 'block';
+            sasso2.style.zIndex = '3';
+            carta.style.opacity = '1';
+            carta.style.display = 'block';
+            carta.style.zIndex = '3';
+            carta2.style.opacity = '1';
+            carta2.style.display = 'block';
+            carta2.style.zIndex = '3';
+            forbice.style.opacity = '1';
+            forbice.style.display = 'block';
+            forbice.style.zIndex = '3';
+            forbice2.style.opacity = '1';
+            forbice2.style.display = 'block';
+            forbice2.style.zIndex = '3';
+            scelta1.style.zIndex = '-3';
+            scelta2.style.zIndex = '-3';
+            mioOutput.style.zIndex= '3';
+            rigioca.style.zIndex = '-3';
+            g1.style.opacity = '1';
+            g2.style.opacity = '1';
+            risultato.style.opacity = '1';
+            intervalID = setInterval(Conto_rovescia,1000);
+        }
+        function Conto_rovescia(){
+            const esci = document.querySelector(".bottone5");
+            const g1 = document.getElementById("g1");
+            const g2 = document.getElementById("g2");
+            const risultato = document.getElementById("risultato");
+            risultato.innerHTML='';
+            const rigioca = document.querySelector(".bottone4");
+            if(n==0){
+                let x1 = Math.floor((Math.random() * 3) + 1);
+                let x2 = Math.floor((Math.random() * 3) + 1);
+                if(x1==1 && x2==1){
+                    carta.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    forbice.style.zIndex = '-3';
+                    forbice2.style.zIndex = '-3';
+                    m1=m1+1;
+                    m2=m2+1;
+                    g1.innerHTML=m1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Pareggio';
+                }
+                if(x1==2 && x2==2){
+                    sasso.style.zIndex = '-3';
+                    sasso2.style.zIndex = '-3';
+                    forbice.style.zIndex = '-3';
+                    forbice2.style.zIndex = '-3';
+                    m1=m1+1;
+                    m2=m2+1;
+                    g1.innerHTML=m1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Pareggio';
+                }
+                if(x1==3 && x2==3){
+                    sasso.style.zIndex = '-3';
+                    sasso2.style.zIndex = '-3';
+                    carta.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    m1=m1+1;
+                    m2=m2+1;
+                    g1.innerHTML=m1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Pareggio';
+                }
+                if(x1==1 && x2==2){
+                    sasso2.style.zIndex = '-3';
+                    carta.style.zIndex = '-3';
+                    forbice.style.zIndex = '-3';
+                    forbice2.style.zIndex = '-3';
+                    m2=m2+1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Vittoria Computer2';
+                }
+                if(x1==1 && x2==3){
+                    sasso2.style.zIndex = '-3';
+                    carta.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    forbice.style.zIndex = '-3';
+                    m1=m1+1;
+                    g1.innerHTML=m1;
+                    risultato.innerHTML='Vittoria Computer1';
+                }
+                if(x1==2 && x2==1){
+                    sasso.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    forbice.style.zIndex = '-3';
+                    forbice2.style.zIndex = '-3';
+                    m1=m1+1;
+                    g1.innerHTML=m1;
+                    risultato.innerHTML='Vittoria Computer1';
+                }
+                if(x1==2 && x2==3){
+                    forbice.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    sasso.style.zIndex = '-3';
+                    sasso2.style.zIndex = '-3';
+                    m2=m2+1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Vittoria Computer2';
+                }
+                if(x1==3 && x2==1){
+                    forbice2.style.zIndex = '-3';
+                    sasso.style.zIndex = '-3';
+                    carta.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    m2=m2+1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Vittoria Computer2';
+                }
+                if(x1==3 && x2==2){
+                    forbice2.style.zIndex = '-3';
+                    carta.style.zIndex = '-3';
+                    sasso.style.zIndex = '-3';
+                    sasso2.style.zIndex = '-3';
+                    m1=m1+1;
+                    g1.innerHTML=m1;
+                    risultato.innerHTML='Vittoria Computer1';
+                }
+
+                mioOutput.style.zIndex= '-3';
+                rigioca.style.opacity = '1';
+                rigioca.style.zIndex = '3';
+                clearInterval(intervalID);
+                esci.style.opacity = '1';
+                esci.style.zIndex = '3';
+                
+            }
+            mioOutput.style.display = 'block';
+            mioOutput.innerHTML+=n;
+            n=n-1;
+            
+        }
+        function esci(){
+            window.location.reload();
+        }
+        function Scelta2(){
+            const esci = document.querySelector(".bottone5");
+            esci.style.opacity = '0';
+            esci.style.zIndex = '-3';
+            const g1 = document.getElementById("g1");
+            const g2 = document.getElementById("g2");
+            const risultato = document.getElementById("risultato");
+            mioOutput.innerHTML = '';
+            n=3;
+            const rigioca = document.querySelector(".bottone6");
+            const scelta1 = document.querySelector(".bottone2");
+            const scelta2 = document.querySelector(".bottone3");
+            sasso.style.opacity = '1';
+            sasso.style.display = 'block';
+            sasso.style.zIndex = '3';
+            sasso2.style.opacity = '1';
+            sasso2.style.display = 'block';
+            sasso2.style.zIndex = '3';
+            carta.style.opacity = '1';
+            carta.style.display = 'block';
+            carta.style.zIndex = '3';
+            carta2.style.opacity = '1';
+            carta2.style.display = 'block';
+            carta2.style.zIndex = '3';
+            forbice.style.opacity = '1';
+            forbice.style.display = 'block';
+            forbice.style.zIndex = '3';
+            forbice2.style.opacity = '1';
+            forbice2.style.display = 'block';
+            forbice2.style.zIndex = '3';
+            scelta1.style.zIndex = '-3';
+            scelta2.style.zIndex = '-3';
+            mioOutput.style.zIndex= '3';
+            rigioca.style.zIndex = '-3';
+            g1.style.opacity = '1';
+            g2.style.opacity = '1';
+            risultato.style.opacity = '1';
+            x=1;
+            n1=0;
+        }
+        function sasso1(){
+            
+            if(x==1){
+                n1=1;
+                if(n1==1){
+                    x3=1;
+                    forbice.style.zIndex = '-3';
+                    carta.style.zIndex = '-3';
+                    intervalID2 = setInterval(Conto_rovescia2,1000);
+                }
+            }
+        }
+        function carta1(){
+            if(x==1){
+                x3=2;
+                forbice.style.zIndex = '-3';
+                sasso.style.zIndex = '-3';
+                intervalID2 = setInterval(Conto_rovescia2,1000);
+            }
+        }
+        function forbice1(){
+            if(x==1){
+                x3=3;
+                sasso.style.zIndex = '-3';
+                carta.style.zIndex = '-3';
+                intervalID2 = setInterval(Conto_rovescia2,1000);
+            }
+        }
+        function Conto_rovescia2(){
+            const esci = document.querySelector(".bottone5");
+            const g1 = document.getElementById("g1");
+            const g2 = document.getElementById("g2");
+            const risultato = document.getElementById("risultato");
+            risultato.innerHTML='';
+            const rigioca = document.querySelector(".bottone6");
+            if(n==0){
+                let x4 = Math.floor((Math.random() * 3) + 1);
+                if(x3==1 && x4==1){
+                    carta.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    forbice.style.zIndex = '-3';
+                    forbice2.style.zIndex = '-3';
+                    m1=m1+1;
+                    m2=m2+1;
+                    g1.innerHTML=m1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Pareggio';
+                }
+                if(x3==2 && x4==2){
+                    sasso.style.zIndex = '-3';
+                    sasso2.style.zIndex = '-3';
+                    forbice.style.zIndex = '-3';
+                    forbice2.style.zIndex = '-3';
+                    m1=m1+1;
+                    m2=m2+1;
+                    g1.innerHTML=m1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Pareggio';
+                }
+                if(x3==3 && x4==3){
+                    sasso.style.zIndex = '-3';
+                    sasso2.style.zIndex = '-3';
+                    carta.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    m1=m1+1;
+                    m2=m2+1;
+                    g1.innerHTML=m1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Pareggio';
+                }
+                if(x3==1 && x4==2){
+                    sasso2.style.zIndex = '-3';
+                    carta.style.zIndex = '-3';
+                    forbice.style.zIndex = '-3';
+                    forbice2.style.zIndex = '-3';
+                    m2=m2+1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Vittoria Computer2';
+                }
+                if(x3==1 && x4==3){
+                    sasso2.style.zIndex = '-3';
+                    carta.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    forbice.style.zIndex = '-3';
+                    m1=m1+1;
+                    g1.innerHTML=m1;
+                    risultato.innerHTML='Vittoria giocatore';
+                }
+                if(x3==2 && x4==1){
+                    sasso.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    forbice.style.zIndex = '-3';
+                    forbice2.style.zIndex = '-3';
+                    m1=m1+1;
+                    g1.innerHTML=m1;
+                    risultato.innerHTML='Vittoria giocatore';
+                }
+                if(x3==2 && x4==3){
+                    forbice.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    sasso.style.zIndex = '-3';
+                    sasso2.style.zIndex = '-3';
+                    m2=m2+1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Vittoria Computer2';
+                }
+                if(x3==3 && x4==1){
+                    forbice2.style.zIndex = '-3';
+                    sasso.style.zIndex = '-3';
+                    carta.style.zIndex = '-3';
+                    carta2.style.zIndex = '-3';
+                    m2=m2+1;
+                    g2.innerHTML=m2;
+                    risultato.innerHTML='Vittoria Computer2';
+                }
+                if(x3==3 && x4==2){
+                    forbice2.style.zIndex = '-3';
+                    carta.style.zIndex = '-3';
+                    sasso.style.zIndex = '-3';
+                    sasso2.style.zIndex = '-3';
+                    m1=m1+1;
+                    g1.innerHTML=m1;
+                    risultato.innerHTML='Vittoria giocatore';
+                }
+
+                mioOutput.style.zIndex= '-3';
+                rigioca.style.opacity = '1';
+                rigioca.style.zIndex = '3';
+                clearInterval(intervalID2);
+                esci.style.opacity = '1';
+                esci.style.zIndex = '3';
+                x=0;
+                n1=0;
+            }
+            mioOutput.style.display = 'block';
+            mioOutput.innerHTML+=n;
+            n=n-1;
+            
+        }
+        
+    </script>
+</body>
+</html>
