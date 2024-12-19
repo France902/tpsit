@@ -18,13 +18,15 @@
     <h3 id="out8"> </h3>
 
     <script>
+        
         let somma=0;
         let c=0;
         let i;
         let cont=0;
-        let x = Math.floor((Math.random() * 1000) + 1);
+        
         setInterval(getTime,5000);
         function getTime(){
+            let x = Math.floor((Math.random() * 1000) + 1);
             document.getElementById("out1").innerHTML = x;
             if(x%2==0){
                 document.getElementById("out2").innerHTML = "numero pari";
@@ -49,7 +51,6 @@
             document.getElementById("out7").innerHTML = "somma: "+x*3;
             document.getElementById("out8").innerHTML = "moltiplicazione per 3.14: "+x*3.14;
         }
-
     </script>
 </body>
 </html>
