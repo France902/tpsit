@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Simulazione Verifica</h1>
+    <h3> </h3>
+    <h2 id="out1"> </h2>
+    <h3 id="out2"> </h3>
+    <h3 id="out3"> </h3>
+    <h3 id="out4"> </h3>
+    <h3 id="out5"> </h3>
+    <h3 id="out6"> </h3>
+    <h3 id="out7"> </h3>
+    <h3 id="out8"> </h3>
+
+    <script>
+        let somma=0;
+        let c=0;
+        let i;
+        let cont=0;
+        let x = Math.floor((Math.random() * 1000) + 1);
+        setInterval(getTime,5000);
+        function getTime(){
+            document.getElementById("out1").innerHTML = x;
+            if(x%2==0){
+                document.getElementById("out2").innerHTML = "numero pari";
+            }
+            else{
+                document.getElementById("out2").innerHTML = "numero dispari";
+            }
+            for(i=2;i<x/2;i++){
+                if(x%i==0){
+                    cont++;
+                }
+            }
+            if(cont==0){
+                document.getElementById("out3").innerHTML = "numero primo";
+            }
+            else{
+                document.getElementById("out3").innerHTML = "numero non primo";
+            }
+            document.getElementById("out4").innerHTML = "doppio: "+x*2;
+            document.getElementById("out5").innerHTML = "metà: "+Math.round(x/2);
+            document.getElementById("out6").innerHTML = "complemento: "+(1000-x);
+            document.getElementById("out7").innerHTML = "somma: "+x*3;
+            document.getElementById("out8").innerHTML = "moltiplicazione per 3.14: "+x*3.14;
+        }
+
+    </script>
+</body>
+</html>
