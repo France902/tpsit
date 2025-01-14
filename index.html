@@ -1,164 +1,169 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;>
-<style>
-body {margin:0;font-family:Arial}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 17px;    
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-</style>
-</head>
-<body>
-
-<div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="https://france902.github.io/tpsit/es%201.html">es 1</a>
-      <a href="https://france902.github.io/tpsit/scheda_personale.html">scheda personale</a>
-      <a href="https://france902.github.io/tpsit/es%201%20css.html">es css</a>
-      <a href="https://france902.github.io/tpsit/es%202%20css.html">es 2 css</a>
-      <a href="https://france902.github.io/tpsit/flip__card.html">es flip card</a>
-      <a href="https://france902.github.io/tpsit/ES%20DIV%20ANNIDATI.html">es div annidati</a>
-      <a href="https://france902.github.io/tpsit/link.html">es link</a>
-      <a href="https://france902.github.io/tpsit/es_1_jst.html">es 1 js</a>
-      <a href="https://france902.github.io/tpsit/es_2_javascript.html">es 2 js</a>
-      <a href="https://france902.github.io/tpsit/es_3_js.html">es 3 js</a>
-      <a href="https://france902.github.io/tpsit/dislivello.html">es dislivello</a>
-      <a href="https://france902.github.io/tpsit/js_5.html">es 5 js</a>
-       <a href="https://france902.github.io/tpsit/es_js_6.html">es 6 js</a>
-      <a href="https://france902.github.io/tpsit/js_7.html">simulazione verifica 1</a>
-       <a href="https://france902.github.io/tpsit/morra_cinese.html">morra cinese</a>
-      <a href="https://france902.github.io/tpsit/array_1.html">Array 1</a>
-      <a href="https://france902.github.io/tpsit/simulazione_verifica.html">Simulazione verifica 2</a>
+    <title>I miei lavori</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          I miei lavori
+        </a>
+      </div>
+    </nav>
+    <div class="container my-5 text-center" style="max-width: 800px;">
+      <h1>Tutti i miei lavori del primo anno</h1>
+      <p class="lead">In questa pagina costruita grazie ai servizi di Bootstrap ci sono allegati tutti gli esercizi e lavori fatti in terza</p>
     </div>
-  </div> 
-  <a href="#about">About</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Presentazione</h5>
+              <p class="card-text">Qui la presentazione di me stesso dove utilizzo a usare i primi tag, come i paragrafi.</p>
+              <a href="es_1.html" class="btn btn-primary">Vai</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Scheda personale</h5>
+              <p class="card-text">Qui un altro lavoro di presentazione ma aggiungendo il tag img.</p>
+              <a href="scheda_personale.html" class="btn btn-primary">Vai</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem; ">
+            <div class="card-body">
+              <h5 class="card-title">Css</h5>
+              <p class="card-text">Primo esercizio di css, dove ho uusato il tag style per personalizzare le mie scatole.</p>
+              <a href="es_1 css.html" class="btn btn-primary">Vai</a>
+            </div>
+          </div>
 
-<div style="padding-left:16px">
-  <h2>IL MIO SITO WEB</h2></h2>
-  <p>Pagina per visualizzare gli esercizi</p>
-</div>
+      
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem; margin-top: 100px;">
+            <div class="card-body">
+              <h5 class="card-title">Css 2</h5>
+              <p class="card-text">Esercizio sempre di css dove ho colorato scatole contenenti citazioni famose</p>
+              <a href="es_2 css.html" class="btn btn-primary">Vai</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem; margin-top: 100px; margin-left: 20px; ">
+            
+            <div class="card-body">
+              <h5 class="card-title">Flip card</h5>
+              <p class="card-text">Esercizio in cui abbiamo creato una flip card che da un lato mostra il monte Bianco mentre dall'altra ka sua descrizione</p>
+              <a href="flip__card.html" class="btn btn-primary">Vai</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem; margin-top: 100px; margin-left: 40px;">
+            <div class="card-body">
+              <h5 class="card-title">Div annidati</h5>
+              <p class="card-text">Esercizio in cui abbiamo imparato cosa sono i div annidati, a cosa servono e come si creano</p>
+              <a href="div_annidati.html" class="btn btn-primary">Vai</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; margin-top: 100px; margin-left: -720px;">
+              <div class="card-body">
+                <h5 class="card-title">Link</h5>
+                <p class="card-text">Esercizio in cui visto e imparato il tag href per mandare la pagina in un link</p>
+                <a href="link.html" class="btn btn-primary">Vai</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem; margin-top: -200px; margin-left: -360px;">
+                <div class="card-body">
+                  <h5 class="card-title">Javascript 1</h5>
+                  <p class="card-text">Esercizio in cui abbiamo usato per la prima volta Javascript</p>
+                  <a href="/es_1_jst.html" class="btn btn-primary">Vai</a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" style="width: 18rem; margin-top: -200px; margin-left: -10px;">
+                  <div class="card-body">
+                    <h5 class="card-title">Javascript 2</h5>
+                    <p class="card-text">Secondo esercizio di javascript in cui abbiamo usato un input e una funzione</p>
+                    <a href="es_2_javascript.html" class="btn btn-primary">Vai</a>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: 18rem; margin-top: 100px; margin-left: -775px;">
+                    <div class="card-body">
+                      <h5 class="card-title">Dislivello</h5>
+                      <p class="card-text">Esercizio in cui dati l'altezza di partenza e quella d'arrivo dovevamo calcolare il dislivello della montagna</p>
+                      <a href="dislivello.html" class="btn btn-primary">Vai</a>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 18rem; margin-top: -200px; margin-left: -410px;">
+                      <div class="card-body">
+                        <h5 class="card-title">Javascript 3</h5>
+                        <p class="card-text">Esercizio in cui abbiamo approfondito tutte le meccaniche di javascript</p>
+                        <a href="es_js_6.html" class="btn btn-primary">Vai</a>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card" style="width: 18rem; margin-top: -200px; margin-left: -60px;">
+                        <div class="card-body">
+                          <h5 class="card-title">Simulazione verifica</h5>
+                          <p class="card-text">Esercizio dato per esercitarci in vista della verifica</p>
+                          <a href="js_7.html" class="btn btn-primary">Vai</a>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card" style="width: 18rem; margin-top: 100px; margin-left: -820px;">
+                          <div class="card-body">
+                            <h5 class="card-title">Morra cinese</h5>
+                            <p class="card-text"> Primo gioco creato, usando sia html, che css, che javascript</p>
+                            <a href="morra_cinese.html" class="btn btn-primary">Vai</a>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card" style="width: 18rem; margin-top: -180px; margin-left: -470px;">
+                            <div class="card-body">
+                              <h5 class="card-title">Array 1</h5>
+                              <p class="card-text">Primo esercizio sugli array</p>
+                              <a href="array_1.html" class="btn btn-primary">Vai</a>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card" style="width: 18rem; margin-top: -170px; margin-left: -145px;">
+                              <div class="card-body">
+                                <h5 class="card-title">Simulazione verifica 2</h5>
+                                <p class="card-text">Una seconda esercitazione per la verifica</p>
+                                <a href="simulazione_verifica.html" class="btn btn-primary">Vai</a>
+                              </div>
+                            </div>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+      
+        </div>
+        </div>
+      </div>
 
-</body>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+
+
+  </body>
 </html>
