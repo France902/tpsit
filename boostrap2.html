@@ -1,0 +1,240 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esempio Bootstrap</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+<style>
+body {
+    background-color: rgb(230, 230, 230);
+}
+</style>
+  </head>
+  
+  <body>
+  
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" style="background-color:rgb(200,200,200); border: 2px solid darkgrey;">
+  
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" onclick="barra()">Barra</a>
+    
+    <button class="navbar-toggler" onclick="barra()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" onclick="home()">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="video()">Video supporto</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" onclick="argomenti()" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Argomenti
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" onclick="ia()">Intelligienza artificiale</a></li>
+            <li><a class="dropdown-item" href="#" onclick="robotica()">Robotica</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#" onclick="creazioni()">Creazioni importanti</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+   <div class="container1" style="background-color: lightgray; border: 2px solid darkgray; min-height: 400px; margin-top: 50px;">
+
+    <h1 class="lead" style="text-align: center;" >
+        <br>
+        <br>
+        
+    Introduzione alla pagina
+    </h1>
+    <h2 class="lead" style="text-align: center;" >
+        In questa pagina vengono approfonditi i vari aspetti riguardanti <i>l'intelligienza artificiale </i> e <i>la robotica. </i>
+    </h2>
+    <h2 class="lead" style="text-align: center;" >
+        In più c'è una sezione riguardante varie creazioni importanti e recenti e una sezione che ti rimanda a un video inerente all'argomento.
+    </h2>
+    <h2 class="lead" style="text-align: center;" >
+        Questa pagina inoltre è stata realizzata tramite i componenti offerti da Boostrap, per info
+        <a class="navbar-brand" href="https://getbootstrap.com/" >Boostrap</a>
+    </h2>
+
+   </div>
+   <div class="container2" style="display:none; background-color: lightgray; border: 2px solid darkgray; min-height: 400px; margin-top: 50px;">
+
+    <h1 class="lead" style="text-align: center;" >
+        <br>
+        <br>
+        
+    Intelligienza artificiale
+    </h1>
+    <h2 class="lead" style="text-align: center;" >
+        L'intelligienza artificiale è una parte dell'informatica che mira a creare sistemi in grado di risolvere i problemi in maniera autonoma e espansiva, implicando un ragionamento dietro essa.
+    </h2>
+    <img style="margin-left: 250px;" src="https://cdn.cpram.com/cmsmedia/data/shared/imageFolder/ia-884a5cef09a5dd3c22df61f296725e17f12c4dfa.jpg" alt="">
+    <h2 class="lead" style="text-align: center;" >
+        Esistono due tipi di IA a seconda delle loro prestazioni e scopi, quelle <i>deboli</i> e quelle <i>forti</i><br>
+        Quelle <i>deboli</i> svolgono compiti ben specifici e spesso legati solo agli algoritmi.
+        <br>
+        Quelle <i>forti</i> sono in grado di svolgere qualsiasi compito intelettuale o processuale, sembrando quasi un umano.
+        <br>
+        <br>
+    </h2>
+    <h1 class="lead" style="text-align: center;" >
+        Usare L'IA in maniera consapevole
+    </h1>
+    
+    <h2 class="lead" style="text-align: center ;" >
+        È fondamentale conoscere sia le potenzialità che i limiti delle tecnologie basate sull'IA, dovuti soprattutto al modo in cui si programmano.
+        <br>
+        <br>
+        <img style="width: 700px;" src="https://www.rizzolieducation.it/content/uploads/2024/02/Rivista-11.jpg" alt="">
+    </h2>
+    <h2 class="lead" style="text-align: center ;" >
+        Quando si utilizza l'IA, soprattutto in contesti importanti (come la sanità o il settore finanziario), è importante garantire che i processi decisionali siano trasparenti e spiegabili. Questo permette di comprendere come e perché una determinata decisione è stata presa, facilitando il controllo e la correzione di eventuali errori o pregiudizi.
+        <br>
+        <br>
+        Gli sviluppatori si impegnano <i>ogni giorno</i> per garantire la privacy all'interno delle chat con l'intelligenza artificiale e prevenire discriminazioni o pregiudizi proveniente da errori nell'IA
+    </h2>
+   </div>
+   <div class="container3" style="display:none; background-color: lightgray; border: 2px solid darkgray; min-height: 400px; margin-top: 50px;">
+
+    <h1 class="lead" style="text-align: center;" >
+        <br>
+        <br>
+        
+    Robotica
+    </h1>
+    <h2 class="lead" style="text-align: center;" >
+        La robotica è una disciplina che si occupa della progettazione, costruzione, programmazione e utilizzo dei robot,<br> Per robot si intende macchine capaci di eseguire compiti in autonomia o con un minimo intervento umano.
+    </h2>
+    <img style="width: 700px; margin-left: 350px;" src="https://img.healthtech360.it/wp-content/uploads/2022/05/01232026/chirurgo-robotico.jpg" alt="">
+    <h2 class="lead" style="text-align: center;" >
+        I robot sono formati da tre parti distinte, quella <i>hardware</i>, quella <i>software</i> e quella che coordina le <i>"funzioni vitali"</i> del robot
+        La parte <i>hardware</i> è formata dai sensori e dai sistemi di controllo del robot
+        <br>
+       La parte <i>software</i> è quella che genera gli algoritmi, studia l'ambiente e fa prendere decisioni al robot, comandata da un'IA.
+        <br>
+        <br>
+    </h2>
+    <h1 class="lead" style="text-align: center;" >
+                qual è il futuro della robotica?
+    </h1>
+    
+    <h2 class="lead" style="text-align: center ;" >
+       Unire sempre di più robot e IA, in modo da avere macchine completamente autonome e funzionali.
+       <br>
+        <br>
+        <img style="width: 700px;" src="https://blob.cloudcomputing.id/images/9c49d53a-d926-4d62-8f12-49c464b3538b/robot-humanoid-l-min.jpg" alt="">
+    </h2>
+    <h2 class="lead" style="text-align: center ;" >
+        <br>
+        Far fare ai robot i lavori più meticolosi oppure duri, come i chirurghi o gli agricoltori.
+        <br>
+        <br>
+        Gli sviluppatori si impegnano <i>ogni giorno</i> per garantire la privacy all'interno delle chat con l'intelligenza artificiale e prevenire discriminazioni o pregiudizi proveniente da errori nell'IA
+    </h2>
+   </div>
+   <div class="container4" style="display:none; background-color: lightgray; border: 2px solid darkgray; min-height: 400px; margin-top: 50px;">
+
+    <h1 class="lead" style="text-align: center;" >
+        <br>
+        <br>
+        
+    Creazioni importanti
+    </h1>
+    <h1 class="lead" style="text-align: center;" >
+        Intelligienze artificiali con modello di linguaggio avanzati, come GPT-4 e chatGPT.
+    </h1>
+    <img style="width: 700px; margin-left: 350px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE7Owc8ZXNhPz8OWyddLud5IaOZ7x0jLQ0jg&s" alt="">
+    <h1 class="lead" style="text-align: center;" >
+        Nuovi sistemi di creazioni immagini a partire da un testo, come DALL-E 2, di OpenAI
+        <br>
+        <br>
+        <img style="width: 700px;" src="https://www.linuxadictos.com/wp-content/uploads/Dall-e.jpg" alt="">
+    </h1>   
+    <h1 class="lead" style="text-align: center ;" >
+       Robot umanoidi molto abili sia come intelleto che movimento, come Boston Dynamics Atlas
+        <br>
+        <br>
+        <img style="width: 700px;" src="https://www.therobotreport.com/wp-content/uploads/2024/04/BD_Atlas_02_01.jpg" alt="">
+    </h1>
+    <h1 class="lead" style="text-align: center ;" >
+        Veicoli autonomi, creazioni molto discusse ma comunque importanti, come la macchina di Tesla
+         <br>
+         <br>
+         <img style="width: 700px;" src="https://bernardmarr.com/wp-content/uploads/2021/07/How-Tesla-Is-Using-Artificial-Intelligence-to-Create-The-Autonomous-Cars-Of-The-Future.jpg" alt="">
+     </h1>
+   </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js" ></script>
+  </body>
+
+  <script>
+    let cont=0;
+    let cont2=0;
+    function barra(){
+        if(cont==0){
+            document.getElementById("navbarSupportedContent").style.display = 'none';
+            cont++;
+        }
+        else{
+            document.getElementById("navbarSupportedContent").style.display = 'block';
+            cont=0;
+        }
+
+    }
+    function home(){
+        document.querySelector(".container1").style.display = 'block';
+        document.querySelector(".container2").style.display = 'none';
+        document.querySelector(".container3").style.display = 'none';
+        document.querySelector(".container4").style.display = 'none';
+    }
+    function video(){
+       window.location.href = 'https://www.youtube.com/watch?v=-D2kPFkwTmg';
+    }
+    function argomenti(){
+        if(cont2==0){
+            document.querySelector(".dropdown-menu").style.display = 'none';
+            cont2++;
+        }
+        else{
+            document.querySelector(".dropdown-menu").style.display = 'block';
+            cont2=0;
+        }
+    }
+    function ia(){
+        document.querySelector(".container1").style.display = 'none';
+        document.querySelector(".container2").style.display = 'block';
+        document.querySelector(".container3").style.display = 'none';
+        document.querySelector(".container4").style.display = 'none';
+    }
+    function robotica(){
+        document.querySelector(".container1").style.display = 'none';
+        document.querySelector(".container2").style.display = 'none';
+        document.querySelector(".container3").style.display = 'block';
+        document.querySelector(".container4").style.display = 'none';
+    }
+    function creazioni(){
+        document.querySelector(".container1").style.display = 'none';
+        document.querySelector(".container2").style.display = 'none';
+        document.querySelector(".container3").style.display = 'none';
+        document.querySelector(".container4").style.display = 'block';
+    }
+  </script>
+</html>
