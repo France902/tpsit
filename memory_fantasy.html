@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Memory</title>
     <style>
         body {
-            background-color: rgb(252, 252, 192)
+            background-color: lightyellow;
         }
     </style>
 </head>
 <body>
-   
-    <div class="pos-f-t">
+    <div class="pos-f-t" style="margin-top: -11vh;">
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg p-4" style="background-color: rgb(241, 241, 123);">
             <button style="border: none; background: none; text-align: center;"><h4 >Credits</h4></button>
@@ -23,14 +24,116 @@
           </div>
         </div>
         <nav class="navbar navbar-light " style="border: 3px solid rgb(245, 187, 165);  background-color: rgb(241, 241, 123); ">
-          <button style="margin-left: 95vw; border: 3px solid rgb(252, 192, 169);" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <h1>Fantasy Memory</h1>
+          <button style="margin-left: 95vw; border: 3px solid rgb(252, 192, 169); margin-top: -5.5vh;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </nav>
       </div>
-    
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+        <div class="col-1" style="background-color: lightcoral; height: 100px; max-width: 150px; border: 1px solid black; transition: background-color 0.2s ease-out"></div>
+        <div class="col-2" style="background-color: lightblue; height: 100px; max-width: 150px; border: 1px solid black; transition: background-color 0.2s ease-out"></div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-3" style="background-color: lightgreen; height: 100px; max-width: 150px; border: 1px solid black; transition: background-color 0.2s ease-out"></div>
+            <div class="col-4" style="background-color: lightsalmon; height: 100px; max-width: 150px; border: 1px solid black; transition: background-color 0.2s ease-out"></div>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+        <div class="col-5" style="background-color: lightcoral; height: 100px; max-width: 150px; border: 1px solid black; transition: background-color 0.5s ease-out"></div>
+        <div class="col-6" style="background-color: lightyellow; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+        <div class="col-7" style="background-color: lightskyblue; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-8" style="background-color: lightgreen; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+            <div class="col-9" style="background-color: lightsalmon; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+            <div class="col-10" style="background-color: lightblue; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-11" style="background-color: lightgrey; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+            <div class="col-12" style="background-color: lightpink; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+            <div class="col-13" style="background-color: lightcyan; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js" ></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        const col1 = document.querySelector(".col-1");
+        const col2 = document.querySelector(".col-2");
+        const col3 = document.querySelector(".col-3");
+        const col4 = document.querySelector(".col-4");
+        let x=0;
+        /*
+        intervalId6=setInterval(() => {
+                if(x==0){
+                    col1.style.opacity = '0';
+                    x++;
+                }
+                else{
+                    if(x==1){
+                    col1.style.opacity = '1';
+                    col2.style.opacity = '0';
+                    x++;
+                    }
+                    else{
+                    if(x==2){
+                    col2.style.opacity = '1';
+                    col3.style.opacity = '0';
+                    x++;
+                    }
+                    else{
+                        if(x==3){
+                    col3.style.opacity = '1';
+                    col4.style.opacity = '0';
+                    x++;
+                    }
+                    else{
+                        x=1;
+                        col4.style.opacity = '1';
+                        col1.style.opacity = '0';
+                        
+                    }
+                }
+                }
+                }
+        }, 500); 
+        */
+       col1.addEventListener('mouseover', function(){
+            col1.style.backgroundColor = 'yellow';
+       });
+       col2.addEventListener('mouseover', function(){
+            col2.style.backgroundColor = 'yellow';
+       });
+       col3.addEventListener('mouseover', function(){
+            col3.style.backgroundColor = 'yellow';
+       });
+       col4.addEventListener('mouseover', function(){
+            col4.style.backgroundColor = 'yellow';
+       });
+
+
+       col1.addEventListener('mouseout', function(){
+            col1.style.backgroundColor = 'lightcoral';
+       });
+       col2.addEventListener('mouseout', function(){
+            col2.style.backgroundColor = 'lightblue';
+       });
+       col3.addEventListener('mouseout', function(){
+            col3.style.backgroundColor = 'lightgreen';
+       });
+       col4.addEventListener('mouseout', function(){
+            col4.style.backgroundColor = 'lightsalmon';
+       });
+
+    </script>
 </body>
 </html>
