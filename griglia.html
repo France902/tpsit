@@ -15,12 +15,12 @@
 <body>
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
-        <div class="col-4" style="background-color: lightcoral; height: 100px; max-width: 150px; border: 1px solid black;"></div>
-        <div class="col-4" style="background-color: lightblue; height: 100px; max-width: 150px; border: 1px solid black;"></div>
+        <div class="col-1" style="background-color: lightcoral; height: 100px; max-width: 150px; border: 1px solid black; transition: background-color 0.2s ease-out"></div>
+        <div class="col-2" style="background-color: lightblue; height: 100px; max-width: 150px; border: 1px solid black; transition: background-color 0.2s ease-out"></div>
         </div>
         <div class="row justify-content-center align-items-center">
-            <div class="col-4" style="background-color: lightgreen; height: 100px; max-width: 150px; border: 1px solid black;"></div>
-            <div class="col-4" style="background-color: lightsalmon; height: 100px; max-width: 150px; border: 1px solid black;"></div>
+            <div class="col-3" style="background-color: lightgreen; height: 100px; max-width: 150px; border: 1px solid black; transition: background-color 0.2s ease-out"></div>
+            <div class="col-4" style="background-color: lightsalmon; height: 100px; max-width: 150px; border: 1px solid black; transition: background-color 0.2s ease-out"></div>
         </div>
     </div>
 <br>
@@ -28,22 +28,92 @@
 <br>
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
-        <div class="col-4" style="background-color: lightcoral; height: 100px; max-width: 150px; border: 1px solid black;"></div>
-        <div class="col-4" style="background-color: lightyellow; height: 100px; max-width: 150px; border: 1px solid black;"></div>
-        <div class="col-4" style="background-color: lightskyblue; height: 100px; max-width: 150px; border: 1px solid black;"></div>
+        <div class="col-5" style="background-color: lightcoral; height: 100px; max-width: 150px; border: 1px solid black; transition: background-color 0.5s ease-out"></div>
+        <div class="col-6" style="background-color: lightyellow; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+        <div class="col-7" style="background-color: lightskyblue; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
         </div>
         <div class="row justify-content-center align-items-center">
-            <div class="col-4" style="background-color: lightgreen; height: 100px; max-width: 150px; border: 1px solid black;"></div>
-            <div class="col-4" style="background-color: lightsalmon; height: 100px; max-width: 150px; border: 1px solid black;"></div>
-            <div class="col-4" style="background-color: lightblue; height: 100px; max-width: 150px; border: 1px solid black;"></div>
+            <div class="col-8" style="background-color: lightgreen; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+            <div class="col-9" style="background-color: lightsalmon; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+            <div class="col-10" style="background-color: lightblue; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
         </div>
         <div class="row justify-content-center align-items-center">
-            <div class="col-4" style="background-color: lightgrey; height: 100px; max-width: 150px; border: 1px solid black;"></div>
-            <div class="col-4" style="background-color: lightpink; height: 100px; max-width: 150px; border: 1px solid black;"></div>
-            <div class="col-4" style="background-color: lightcyan; height: 100px; max-width: 150px; border: 1px solid black;"></div>
+            <div class="col-11" style="background-color: lightgrey; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+            <div class="col-12" style="background-color: lightpink; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
+            <div class="col-13" style="background-color: lightcyan; height: 100px; max-width: 150px; border: 1px solid black; transition: opacity 0.5s ease-out;"></div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
     <script src="js/bootstrap.min.js" ></script>
+    <script>
+        const col1 = document.querySelector(".col-1");
+        const col2 = document.querySelector(".col-2");
+        const col3 = document.querySelector(".col-3");
+        const col4 = document.querySelector(".col-4");
+        let x=0;
+        /*
+        intervalId6=setInterval(() => {
+                if(x==0){
+                    col1.style.opacity = '0';
+                    x++;
+                }
+                else{
+                    if(x==1){
+                    col1.style.opacity = '1';
+                    col2.style.opacity = '0';
+                    x++;
+                    }
+                    else{
+                    if(x==2){
+                    col2.style.opacity = '1';
+                    col3.style.opacity = '0';
+                    x++;
+                    }
+                    else{
+                        if(x==3){
+                    col3.style.opacity = '1';
+                    col4.style.opacity = '0';
+                    x++;
+                    }
+                    else{
+                        x=1;
+                        col4.style.opacity = '1';
+                        col1.style.opacity = '0';
+                        
+                    }
+                }
+                }
+                }
+        }, 500); 
+        
+       col1.addEventListener('mouseover', function(){
+            col1.style.backgroundColor = 'yellow';
+       });
+       col2.addEventListener('mouseover', function(){
+            col2.style.backgroundColor = 'yellow';
+       });
+       col3.addEventListener('mouseover', function(){
+            col3.style.backgroundColor = 'yellow';
+       });
+       col4.addEventListener('mouseover', function(){
+            col4.style.backgroundColor = 'yellow';
+       });
+
+
+       col1.addEventListener('mouseout', function(){
+            col1.style.backgroundColor = 'lightcoral';
+       });
+       col2.addEventListener('mouseout', function(){
+            col2.style.backgroundColor = 'lightblue';
+       });
+       col3.addEventListener('mouseout', function(){
+            col3.style.backgroundColor = 'lightgreen';
+       });
+       col4.addEventListener('mouseout', function(){
+            col4.style.backgroundColor = 'lightsalmon';
+       });
+    */
+    </script>
+    
 </body>
 </html>
