@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form method="get" action="/action_page.php">
+  <label for="fname">Nickname:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Message:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <input type="radio" id="private" name="fav_language" value="private" >
+  <label for="private">private</label><br>
+  <input type="radio" id="public" name="fav_language" value="public">
+  <label for="public">public</label><br>
+  <input type="submit" value="Send" style="margin-left: 100px;" onclick="salva()">
+</form> 
+<script>
+    function salva(){
+        let nickname = document.getElementById("fname").value
+        let message = document.getElementById("lname").value
+        alert(nickname)
+        alert(message)
+    }
+
+</script>
+</body>
+</html>
