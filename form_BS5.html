@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricezione Dati</title>
+</head>
+<body>
+    <form onsubmit="action(event)" >
+        <input type="text" name="name" placeholder="Nome">
+        <br> <br>
+        <input type="text" name="email" placeholder="Email">
+        <br> <br>
+        <button type="submit">Send</button>
+    </form>
+    
+    <h2>Dati ricevuti:</h2>
+    <p id="output"></p>
+   
+    <script>
+            const params = new URLSearchParams(window.location.search);
+            let name = params.get("name") || "Nome non fornito";
+            let email = params.get("email") || "Email non fornita";
+            document.getElementById("output").innerHTML = `Nome: ${name}\nEmail: ${email}`;
+    </script>
+</body>
+</html>
