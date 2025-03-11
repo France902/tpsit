@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generazione frasi casuali</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Generatore di frasi casuali</h1>
+    <p id="testo" style="text-align: center;"></p>
+    <button style="text-align: center; margin-left: 47vw;" onclick="window.location.reload()">Restart</button>
+    <script>
+let soggetti = ["Mario", "Luca", "Giulia", "Anna", "Francesco", "Elena", "Roberto", "Sara", "Davide", "Chiara"];
+let verbi = ["mangia", "corre", "legge", "scrive", "disegna", "parla", "cammina", "guarda", "ascolta", "gioca"];
+let complemento = ["una mela", "nel parco", "un libro", "una lettera", "un quadro", "al telefono", "sul marciapiede", "la TV", "musica", "a calcio"];
+let cont1=9;
+let cont2=9;
+let cont3=9;
+// Funzione per riempire un array con prompt
+function riempiArray(nomeArray, tipo) {
+    while (true) {
+        let input = prompt(`Inserisci un ${tipo} (lascia vuoto per terminare):`);
+        if(tipo=="soggetto"){
+            cont1++;
+        }
+        else{
+            if(tipo=="verbo"){
+                cont2++;
+            }
+            else{
+                cont3++;
+            }
+        }
+        if (input === null || input.trim() === "") {
+            break; // Esce dal ciclo se l'utente preme "Annulla" o non inserisce nulla
+        }
+
+        nomeArray.push(input); // Aggiunge l'elemento all'array
+    }
+}
+
+
+riempiArray(soggetti, "soggetto", cont1);
+riempiArray(verbi, "verbo", cont2);
+riempiArray(complemento, "complemento", cont3);
+
+// Mostra i risultati in console
+console.log("Soggetti:", soggetti, cont1);
+console.log("Verbi:", verbi, cont2);
+console.log("Complementi:", complemento, cont3);
+
+function random(nomeArray, c){
+    let n = Math.floor(Math.random() * (c));
+    document.getElementById("testo").innerHTML += nomeArray[n] + " "
+}
+random(soggetti, cont1);
+random(verbi, cont2);
+random(complemento, cont3);
+    </script>
+</body>
+</html>
