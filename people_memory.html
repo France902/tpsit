@@ -7,9 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <style>
-        body {
-            background-color: lightcoral;
-        }
+
     </style>
 </head>
 <body>
@@ -51,12 +49,11 @@
     <button onclick="exit()" class="rounded-pill px-4 py-2 " id="titolo2" style="margin-top: 10vh; width: 15vw; height: 10vh; background-color: rgba(129, 6, 6, 0.5); color: white; ">
           Click here
         </button>
-    
 </div>
     </div>
 </div>
-<div id="tut" style="text-align: center; width: 80vw; margin-left: 12vw; height: 90vh; background-color: rgb(54, 203, 240); border: 3px solid white; display: none;"></div>
-<p class="text-start fs-7" id="tut2"  style="display: none;  height: 60vh; font-size: 22px; width: 75vw; -webkit-text-stroke: 0.2px white; opacity: 1; font-weight: bold; margin-left: 15vw; margin-top: -85vh;" >The Sequential Memory Game is a captivating and challenging memory-based game designed to test and improve players' short-term memory, focus, and cognitive skills. The game presents a sequence of visual or auditory cues that players must remember and replicate in the exact order they were presented. As the game progresses, the sequences become increasingly longer and more complex, providing a stimulating mental workout.
+<div id="tut" style="text-align: center; width: 80vw; margin-left: 12vw; height: 90vh; background-color: rgba(29, 29, 30); border: 3px solid white; display: none; margin-top: -320px;"></div>
+<p class="text-start fs-7" id="tut2"  style="display: none;  height: 60vh; font-size: 22px; width: 75vw; -webkit-text-stroke: 0.3px white; opacity: 1; font-weight: bold; margin-left: 15vw; margin-top: -85vh;" >The Sequential Memory Game is a captivating and challenging memory-based game designed to test and improve players' short-term memory, focus, and cognitive skills. The game presents a sequence of visual or auditory cues that players must remember and replicate in the exact order they were presented. As the game progresses, the sequences become increasingly longer and more complex, providing a stimulating mental workout.
 
     How to Play:
     Start the Game: The game begins with a simple sequence of cues (e.g., lights, sounds, or images).
@@ -69,17 +66,17 @@
     
     Game Over: If a player makes a mistake, the game ends, and their score (based on the number of correct sequences) is displayed.</p>
 </div>
-<button onclick="exit_t()" class="rounded-pill px-4 py-2 " id="tut3" style="margin-top: 10vh; margin-left: 43vw; width: 15vw; height: 10vh; background-color: rgba(70, 67, 67, 0.5); color: white; display: none; ">
+<button onclick="exit_t()" class="rounded-pill px-4 py-2 " id="tut3" style="margin-top: 10vh; margin-left: 44vw; width: 15vw; height: 10vh; background-color: rgba(70, 67, 67, 0.5); color: white; display: none; ">
     Exit
   </button>
 
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-primary" style="display: none; margin-top: -17.5vh; margin-left: -1vw; border: 3px solid rgb(241, 114, 114); height: 13vh;" id="navbar">
+<nav class="navbar navbar-expand-lg" style="display: none; margin-top: -17.5vh; border: 5px solid black; background-color: orangered; height: 13vh;" id="navbar">
     <div class="container-fluid">
-        <h1 class="navbar-brand" style="font-size: 6vh; width: 20vw;" href="#">
+        <h1 class="navbar-brand" style="font-size: 6vh;" href="#">
             People Memory
         </h1>
-        <p id="output" style="margin-left: -40vw; font-weight: bold; font-size: 6vh;"> STARTS IN: </p>
+        <p id="output" style="margin-left: -40vw; font-weight: bold; font-size: 6vh;"></p>
         <p id="vittoria" style="margin-left: -40vw; font-weight: bold; font-size: 6vh; display: none;">HAI INDOVINATO</p>
         <p id="sconfitta" style="margin-left: -40vw; font-weight: bold; font-size: 6vh; display: none;">NON HAI INDOVINATO</p>
 </div>
@@ -139,10 +136,6 @@
             document.getElementById("griglia2").style.opacity = '1';
             document.getElementById("griglia3").style.opacity = '1';
             document.getElementById("griglia4").style.opacity = '1';
-            document.getElementById("griglia1").style.display = 'block';
-            document.getElementById("griglia2").style.display = 'block';
-            document.getElementById("griglia3").style.display = 'block';
-            document.getElementById("griglia4").style.display = 'block';
         }
         function exit(){
             document.getElementById("titolo4").style.display = 'block';
@@ -164,16 +157,13 @@
             document.getElementById("p3").style.display = 'block';
         }
         function tutorial(){
-            document.getElementById("griglia1").style.display = 'none';
-            document.getElementById("griglia2").style.display = 'none';
-            document.getElementById("griglia3").style.display = 'none';
-            document.getElementById("griglia4").style.display = 'none';
+            document.getElementById("griglia1").style.opacity = '0';
+            document.getElementById("griglia2").style.opacity = '0';
+            document.getElementById("griglia3").style.opacity = '0';
+            document.getElementById("griglia4").style.opacity = '0';
             document.getElementById("tut").style.display = 'block';
             document.getElementById("tut2").style.display = 'block';
             document.getElementById("tut3").style.display = 'block';
-            document.getElementById("p1").style.display = 'none';
-            document.getElementById("p2").style.display = 'none';
-            document.getElementById("p3").style.display = 'none';
         }
         function exit_t(){
             document.getElementById("tut").style.display = 'none';
@@ -183,13 +173,7 @@
             document.getElementById("griglia2").style.opacity = '1';
             document.getElementById("griglia3").style.opacity = '1';
             document.getElementById("griglia4").style.opacity = '1';
-            document.getElementById("griglia1").style.display = 'block';
-            document.getElementById("griglia2").style.display = 'block';
-            document.getElementById("griglia3").style.display = 'block';
-            document.getElementById("griglia4").style.display = 'block';
-            document.getElementById("p1").style.display = 'block';
-            document.getElementById("p2").style.display = 'block';
-            document.getElementById("p3").style.display = 'block';
+
         }
         function start(){
             let y=0;
@@ -211,6 +195,8 @@
             document.getElementById("output").style.display = 'block';
             document.getElementById("vittoria").style.display = 'none';
             document.getElementById("sconfitta").style.display = 'none';
+
+            document.body.style.backgroundColor = 'darkred';
             for(let i=0;i<4;i++){
                 condizione=false;
                 while(condizione==false){
@@ -304,14 +290,12 @@
             game();
         }
         function game(){
-
             document.getElementById("game").onclick = null;
             document.getElementById("esci").onclick = null;
             let n=4;
             let intervalId2=setInterval(() => {
             n=n-1;
-
-            document.getElementById("output").innerHTML = "STARTS IN: "+n;
+            document.getElementById("output").innerHTML = n;
             if(n==0){
                 document.getElementById("output").style.display = 'none';
                 document.getElementById("output").innerHTML = 3;
