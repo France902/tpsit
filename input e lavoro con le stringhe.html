@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input e lavoro con le stringhe</title>
+</head>
+<body>
+    <form method="get">
+        <input type="text" id="input1" placeholder="stringa 1">
+        <br><br>
+        <input type="text" id="input2" placeholder="stringa 2">
+        <br><br>
+        <button onclick="salva()">Send</button>
+    </form>
+
+
+    <script>
+        function salva(){
+        let s1 = document.getElementById("input1").value;
+        let s2 = document.getElementById("input2").value;
+        calcola(s1, s2);
+        }
+        function calcola(s1, s2){
+            let l1 = s1.length;
+            let l2 = s2.length;
+            alert(l1);
+            alert(l2);
+        }
+    </script>
+</body>
+</html>
