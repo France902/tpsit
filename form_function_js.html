@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form onsubmit="action(event)">
+        <input type="number" name="input1" placeholder="input1">
+        <input type="text" name="peso1" placeholder="peso1">
+        <br> <br>
+        <input type="number" name="input2" placeholder="input2">
+        <input type="text" name="peso2" placeholder="peso2">
+        <br> <br>
+        <input type="number" name="input3" placeholder="input3">
+        <input type="text" name="peso3" placeholder="peso3">
+        <br> <br>
+        <input type="number" name="input4" placeholder="input4">
+        <input type="text" name="peso4" placeholder="peso4">
+        <br> <br>
+        <button type="submit" onclick="f()">Send</button>
+    </form>
+    <p> Per fare il primo output ho usato la formula matematica della funzione di attivazione della rete neuronale nelle ia (activation function), che si basa sulla somma fra i valori corrispondenti ai loro pesi. <br> Dopodichè ho fatto la funzione soglia, che restituisce 1 quando la somma precedente è maggiore di 0 e 0 in tutti gli altri casi. Nella rete neuronale l'utilizzo di questa funzione è molto utile qualora si ha bisogno di un segnale in output binario del tipo Y/N (Y uscita, N somma).</p>
+    <h2>Output: </h2>
+    <p id="output"></p>
+    <p id="output2"></p>
+    
+    <script>
+
+        function f() {
+            event.preventDefault();
+
+            let input1 = parseFloat(document.querySelector('input[name="input1"]').value);
+            let input2 = parseFloat(document.querySelector('input[name="input2"]').value);
+            let input3 = parseFloat(document.querySelector('input[name="input3"]').value);
+            let input4 = parseFloat(document.querySelector('input[name="input4"]').value);
+            let peso1 = parseFloat(document.querySelector('input[name="peso1"]').value);
+            let peso2 = parseFloat(document.querySelector('input[name="peso2"]').value);
+            let peso3 = parseFloat(document.querySelector('input[name="peso3"]').value);
+            let peso4 = parseFloat(document.querySelector('input[name="peso4"]').value);
+            
+
+            let somma = (input1*peso1) + (input2*peso2) + (input3*peso3) + (input4*peso4);
+            document.getElementById("output").innerHTML = somma;
+            if(somma>0){
+                document.getElementById("output2").innerHTML = 1;
+            }
+            else{
+                document.getElementById("output2").innerHTML = 0;
+            }
+        }
+    </script>
+</body>
+</html>
